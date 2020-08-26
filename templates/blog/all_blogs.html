@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for entry in entries %}
+
+    <a href="{% url 'blog:detail' entry.id %}"><h2> {{ entry.title }} </h2><a/>
+    <small>{{ entry.date }}</small>
+    <p> {{ entry.text }}</p>
+
+
+{% endfor %}
+{% endblock %}

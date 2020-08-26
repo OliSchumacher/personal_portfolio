@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>hello and welcome to the home page.. ehh that's not me</h2>
+
+
+{% load static %}
+
+
+    <img src="{% static 'personal/cat.jpg' %}">
+
+{% for project in projects %}
+
+    <h2>{{ project.tilte }}</h2>
+    <p>{{ project.description }}</p>
+    <img src="{{ project.image.url }}" height=108 width=192>
+
+{% endfor %}
+
+{% endblock %}
